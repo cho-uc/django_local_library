@@ -1,0 +1,9 @@
+# Text backup files
+*.bak
+
+# Database
+*.sqlite3
+
+catalog/__pycache__/
+catalog/migrations/__pycache__/
+locallibrary/__pycache__/
