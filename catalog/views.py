@@ -73,3 +73,11 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 	def get_queryset(self):
 		return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
+
+#----------------------------------------------
+
+def about(request):
+	return render(request, 'catalog/about.html', {'title': 'About'})
+
+def news(request):
+	return render(request, 'catalog/news.html', {'title': 'News'})

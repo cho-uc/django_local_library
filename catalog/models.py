@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from datetime import date
 
 class Genre(models.Model):
-	"""Model representing a book genre."""
 	name = models.CharField(max_length=200, help_text='Enter a book genre (e.g. Science Fiction)')
 
 	def __str__(self):
@@ -15,7 +14,6 @@ from django.urls import reverse # Used to generate URLs by reversing the URL pat
 #------------------------------------------------
 
 class Book(models.Model):
-	"""Model representing a book (but not a specific copy of a book)."""
 	title = models.CharField(max_length=200)
 
 	# Foreign Key used because book can only have one author, but authors can have multiple books
@@ -49,7 +47,6 @@ class Book(models.Model):
 import uuid # Required for unique book instances
 
 class BookInstance(models.Model):
-	"""Model representing a specific copy of a book (i.e. that can be borrowed from the library)."""
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Unique ID for this particular book across whole library')
 	book = models.ForeignKey('Book', on_delete=models.RESTRICT, null=True)
 	imprint = models.CharField(max_length=200)

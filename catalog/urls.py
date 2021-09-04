@@ -26,5 +26,8 @@ urlpatterns = [
 
 urlpatterns += [
 	path('mybooks/', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
+	path('about/', views.about, name='catalog-about'),
+	path('news/', views.news, name='catalog-news'),
 ]
 
+# "About" and "News" page use Function views

@@ -7,3 +7,5 @@
 catalog/__pycache__/
 catalog/migrations/__pycache__/
 locallibrary/__pycache__/
+users/__pycache__/
+users/migrations/__pycache__/

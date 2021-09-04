@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+{% block content %}
+	<h1>About Page</h1>
+	<br/>
+	<p>Local Library is an open, editable library catalog, building towards a web page for every book ever published. </p>
+	<ul>
+	<li>Keep track of your favorite books</li>
+	<li>Organize your books borrowing schedule </li>
+	<li>Try the virtual Library Explorer </li>
+	</ul>
+{% load static %}
+	<img src="{% static 'images/students.jpg' %}" alt="Individual author" style="width:400px;height:396px;">
+	<p></p>
+{% endblock content %}
